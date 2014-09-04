@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="256dp">
+        
+
+    <fragment
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        class="com.google.android.gms.maps.MapFragment"
+        map:mapType="normal"
+        map:uiRotateGestures="false"
+        map:uiScrollGestures="true"
+        map:uiZoomControls="false"
+        map:uiZoomGestures="true" />
+    
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:hint="@string/travel"
+        android:background="@drawable/linearlayouttopline" 
+        android:singleLine="true"
+        android:imeOptions="actionNone"
+        android:inputType="textCapWords|textAutoCorrect"
+        android:paddingLeft="5dp"
+        >
+        
+    </AutoCompleteTextView>
+    
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/postListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/main_edit_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linearlayouttopline" >
+
+        <EditText
+            android:id="@+id/postEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity=""
+            android:inputType="textCapSentences|textAutoCorrect|textMultiLine"
+            android:maxLines="4" >
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/postSendButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:gravity="bottom"
+            android:scaleType="fitXY"
+            android:src="@drawable/send_button" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Apogee</string>
+    <string name="action_settings">Settings</string>
+    <string name="report">Report</string>
+    <string name="user_settings">User Settings</string>
+    <string name="display_name">Display Name</string>
+    <string name="anonymous">Anonymous</string>
+    <string name="search_radius">Search Radius</string>
+    <string name="select_image">Select Image</string>
+    <string name="sent">Sent</string>
+    <string name="travel">Travel</string>
+    <string name="location_not_found">Please try again if your location has been found</string>
+	<color name="appcolor">#03a9f4</color>
+	
+    <string-array name="settings_radius_names">
+        <item>1km</item>
+        <item>20km</item>
+        <item>100km</item>
+    </string-array>
+    <string-array name="settings_radius_values">
+        <item>1</item>
+        <item>20</item>
+        <item>100</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:title="@string/user_settings" >
+        
+    </PreferenceCategory>
+     <com.apogeeapp.apogee.ImagePicker
+        android:key="select_image"
+        android:title="@string/select_image"
+        android:layout="@layout/single_image" /> 
+        
+    <EditTextPreference
+        android:key="display_name"
+        android:title="@string/display_name"
+        android:defaultValue="@string/anonymous"
+        android:maxLength="24" />
+    
+    <PreferenceCategory
+        android:title="@string/search_radius" >
+        
+    </PreferenceCategory>
+    <ListPreference 
+        android:key="search_radius"
+        android:title="@string/search_radius"
+        android:entries="@array/settings_radius_names"
+        android:entryValues="@array/settings_radius_values"
+        android:dialogTitle="@string/search_radius"
+        android:defaultValue="100"/>
+    
+
+</PreferenceScreen>
