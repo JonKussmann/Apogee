@@ -13,12 +13,11 @@ import android.util.Log;
 
 public class PushBroadcastReceiver extends BroadcastReceiver {
 	private static final String TAG = "PushBroadcastReceiver";
-	private Context context;
+
 	private double lat, lon;
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		this.context = context;
 		Log.d(TAG, "onReceived called" + intent);
 
 		if (intent.getAction().equals("com.apogee.REFRESH") && MainActivity.getMainActivityVisible()) {

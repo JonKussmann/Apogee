@@ -12,7 +12,6 @@ import android.preference.PreferenceManager;
 
 
 public class Application extends android.app.Application {
-	private static final String TAG = "Application";
 	private static String DISPLAY_NAME = "display_name";
 	private static SharedPreferences sharedPreferences;
 	private static String SEARCH_RADIUS = "search_radius";

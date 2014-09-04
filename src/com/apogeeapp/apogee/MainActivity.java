@@ -107,7 +107,6 @@ public class MainActivity extends Activity implements LocationListener,
 	private LocationClient locationClient;
 
 	private static Location lastLocation = null;
-	private static Location currentLocation = null;
 	private Circle mapCircle;
 	private static float radius;
 
@@ -624,7 +623,7 @@ public class MainActivity extends Activity implements LocationListener,
 			map.clear();
 
 			// Add a new marker
-			Marker marker = map.addMarker(markerOpts1);
+			map.addMarker(markerOpts1);
 			// mapMarkers.put(post.getObjectId(), marker);
 			// marker.showInfoWindow();
 			// Clean up old markers.
@@ -665,7 +664,7 @@ public class MainActivity extends Activity implements LocationListener,
 							map.clear();
 
 							// Add a new marker
-							Marker marker = map.addMarker(markerOpts);
+							map.addMarker(markerOpts);
 
 						}
 
@@ -773,14 +772,7 @@ public class MainActivity extends Activity implements LocationListener,
 	}
 
 	@Override
-	public void onDisconnected() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void onLocationChanged(Location location) {
-		currentLocation = location;
 		if (lastLocation != null
 				&& geoPointFromLocation(location).distanceInKilometersTo(
 						geoPointFromLocation(lastLocation)) < 0.250) {
@@ -1038,7 +1030,6 @@ public class MainActivity extends Activity implements LocationListener,
 
 	@Override
 	public void onLowMemory() {
-		// TODO Auto-generated method stub
 		super.onLowMemory();
 		Log.d(TAG, "onLowMemory called");
 	}
@@ -1140,6 +1131,12 @@ public class MainActivity extends Activity implements LocationListener,
 			progressDialog.dismiss();
 		}
 
+	}
+
+	@Override
+	public void onDisconnected() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

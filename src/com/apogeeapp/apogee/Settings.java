@@ -19,7 +19,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -113,7 +112,6 @@ public class Settings extends PreferenceFragment {
 				&& resultCode == Activity.RESULT_OK && null != data) {
 			Log.d(TAG, "start of if statement on activity result" + requestCode + resultCode + data);
 			
-			File tempFile = getTempFile();
 			String filePath = Environment.getExternalStorageDirectory() + "/temporary_holder.jpg";
 			Log.d(TAG, "path" + filePath);
 			

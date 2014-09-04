@@ -25,7 +25,7 @@ public class CommentsAdapter extends ParseQueryAdapter<Comment> {
 
 			@Override
 			public ParseQuery<Comment> create() {
-				ParseQuery query = new ParseQuery("Comment");
+				ParseQuery<Comment> query = new ParseQuery<Comment>("Comment");
 				query.whereEqualTo("post", postId);
 				query.orderByDescending("epochTime");
 				query.setCachePolicy(ParseQuery.CachePolicy.CACHE_THEN_NETWORK);

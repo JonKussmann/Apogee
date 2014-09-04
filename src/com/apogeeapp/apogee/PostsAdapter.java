@@ -42,11 +42,10 @@ public class PostsAdapter extends ParseQueryAdapter<Post> {
 				ParseGeoPoint southWest = new ParseGeoPoint(bounds.southwest.latitude, bounds.southwest.longitude);
 				
 				
-				ParseQuery query = new ParseQuery("Post");
+				ParseQuery<Post> query = new ParseQuery<Post>("Post");
 				query.orderByDescending("createdAt");
 				query.setLimit(100);
 				query.whereWithinGeoBox("location", southWest, northEast);
-				//query.whereWithinKilometers("location", geoPointFromLocation(MainActivity.getMyLoc()), Application.getRadius());
 				return query;
 				
 			}
@@ -59,10 +58,6 @@ public class PostsAdapter extends ParseQueryAdapter<Post> {
        .cacheInMemory(true)
        .build();
 		
-	}
-	
-	private static ParseGeoPoint geoPointFromLocation(Location loc) {
-		return new ParseGeoPoint(loc.getLatitude(), loc.getLongitude());
 	}
 
 	@Override
